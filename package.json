@@ -1,0 +1,21 @@
+{
+  "name": "csoeventi-ui",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+
+  "scripts": {
+    "build": "node build.js",
+    "watch": "chokidar 'src/*' -c 'npm run build'",
+    "serve": "serve ./dist"
+  },
+  "keywords": ["Widget"],
+  "author": "Sajadweb https://github.com/sajadweb",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "clean-css": "^5.3.3",
+    "serve": "^14.2.4",
+    "uglify-js": "^3.19.3"
+  }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+
+<body>
+    <div id="csoeventi-ui">
+        <div class="calendar-info">
+            <span class="icon-back" onclick="backBtn()">
+                <span class="material-symbols-rounded">arrow_back</span>
+            </span>
+            
+            <div class="specialist-title">Specialist CSO</div>
+            <h1 class="main-title">Book an appointment with one of our product specialists</h1>
+            <div class="info-row">
+                <span class="material-symbols-rounded icon">schedule</span>
+                <span class="info-text">1 hr</span>
+            </div>
+            <div class="info-row">
+                <span class="material-symbols-rounded icon">videocam</span>
+                <span class="info-text bold">Web conferencing details provided upon confirmation.</span>
+            </div>
+            <p class="description">
+                Choose the date and time to book an appointment with a CSO product specialist to find out in detail the
+                news and features of our products.
+            </p>
+            <a href="#" class="cookie-settings">Cookie settings</a>
+
+        </div>
+        <div class="calendar">
+            <div class="calendar-container">
+                <header class="calendar-header">
+                    <p class="calendar-current-date"></p>
+                    <div class="calendar-navigation">
+                        <span id="calendar-prev" class="material-symbols-rounded">
+                            chevron_left
+                        </span>
+                        <span id="calendar-next" class="material-symbols-rounded">
+                            chevron_right
+                        </span>
+                    </div>
+                </header>
+
+                <div class="calendar-body">
+                    <ul class="calendar-weekdays">
+                        <li>Sun</li>
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                    </ul>
+                    <ul class="calendar-dates"></ul>
+                </div>
+
+
+
+            </div>
+            <div class="calendar-events">
+
+
+                <div class="calendar-events-date">Thursday, May 29</div>
+                <!--  -->
+                <div class="calendar-times">
+                    <button id="btn-11:30am" class="calendar-time-btn" onclick="sctBtn('11:30am')">
+                        11:30am
+                    </button>
+                    <div id="next-11:30am" class="calendar-events-top" style="display: none;">
+                        <button class="calendar-btn selected">10:30am</button>
+                        <button onclick="sctNextBtn('11:30am')" class="calendar-btn next">Next</button>
+                    </div>
+                    <button id="btn-12:30pm" class="calendar-time-btn" onclick="sctBtn('12:30pm')">12:30pm</button>
+                    <div id="next-12:30pm" class="calendar-events-top" style="display: none;">
+                        <button class="calendar-btn selected">12:30pm</button>
+                        <button onclick="sctNextBtn('12:30pm')" class="calendar-btn next">Next</button>
+                    </div>
+                    <button id="btn-3:30pm" class="calendar-time-btn" onclick="sctBtn('3:30pm')">3:30pm</button>
+                    <div id="next-3:30pm" class="calendar-events-top" style="display: none;">
+                        <button class="calendar-btn selected">3:30pm</button>
+                        <button onclick="sctNextBtn('3:30pm')" class="calendar-btn next">Next</button>
+                    </div>
+                    <button id="btn-4:30pm" class="calendar-time-btn" onclick="sctBtn('4:30pm')">4:30pm</button>
+                    <div id="next-4:30pm" class="calendar-events-top" style="display: none;">
+                        <button class="calendar-btn selected">4:30pm</button>
+                        <button onclick="sctNextBtn('4:30pm')" class="calendar-btn next">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calendar-form">
+
+            <div class="calendar-form-container">
+                <h2>Enter Details</h2>
+                <form>
+                    <label class="calendar-form-label" for="name">Name <span class="required">*</span></label>
+                    <input class="calendar-form-input" type="text" id="name" name="name" required>
+
+                    <label class="calendar-form-label" for="email">Email <span class="required">*</span></label>
+                    <input class="calendar-form-input" type="email" id="email" name="email" required>
+
+                    <button type="button" class="calendar-form-btn">Add Guests</button>
+
+                    <div class="calendar-form-desc" style="margin-top:18px;">
+                        Please share anything that will help prepare for our meeting.
+                    </div>
+                    <textarea class="calendar-form-textarea" id="notes" name="notes" rows="3"></textarea>
+
+                    <div class="calendar-form-terms">
+                        By proceeding, you confirm that you have read and agree to
+                        <a href="#" target="_blank">Calendly's Terms of Use</a> and
+                        <a href="#" target="_blank">Privacy Notice</a>.
+                    </div>
+
+                    <button type="submit" class="calendar-form-submit">Schedule Event</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
