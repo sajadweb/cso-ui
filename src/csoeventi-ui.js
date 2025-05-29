@@ -144,11 +144,6 @@ class CsoeventiUi {
                     </div>
                     <textarea class="calendar-form-textarea" id="description" name="description" rows="3"></textarea>
 
-                    <div class="calendar-form-terms">
-                        By proceeding, you confirm that you have read and agree to
-                        <a href="#" target="_blank">Calendly's Terms of Use</a> and
-                        <a href="#" target="_blank">Privacy Notice</a>.
-                    </div>
                     <button type="submit" class="calendar-form-submit">Schedule Event</button>
                 </form>
             </div>
@@ -472,6 +467,10 @@ function backBtn() {
   const back = document.querySelector('.icon-back');
   if (back) {
     back.style.display = 'none';
+  }
+  const form = document.getElementById('form');
+  if (form) {
+    form.reset();
   }
 }
 
