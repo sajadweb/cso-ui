@@ -423,3 +423,38 @@ header .calendar-current-date {
 .calendar-events{
     display: none   ;
 }
+.calendar-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #388e3c;
+    background: #e8f5e9;
+    border-radius: 16px;
+    padding: 32px 24px 28px 24px;
+    margin: 32px auto 0 auto;
+    max-width: 380px;
+    box-shadow: 0 2px 12px rgba(76, 175, 80, 0.08);
+    text-align: center;
+}
+
+.calendar-success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-success-title {
+    color: #388e3c;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.calendar-success-desc {
+    color: #388e3c;
+    margin-top: 8px;
+    font-size: 1em;
+}
+
+ 
